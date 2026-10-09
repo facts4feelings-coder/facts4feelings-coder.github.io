@@ -16,3 +16,10 @@ Marketing website for **TechMint**, a web studio that builds **new websites** an
 Just open `index.html` in a browser.
 
 `PROMPT.md` contains the full AI prompt to rebuild this design in Next.js.
+
+## Contact
+- Email: info@techmint.org
+- WhatsApp: +44 7557 009995
+- Phone: 0313 5054930
+
+The contact form opens WhatsApp with a pre-filled message.
