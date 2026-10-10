@@ -8,6 +8,7 @@ Marketing website for **TechMint**, a web studio that builds **new websites** an
 - Professional white & blue corporate design (Sora + Inter + JetBrains Mono)
 - **Live "TechMint Studio" panel** in the hero that builds a website in real time, then redesigns an old one (Old → New with a scan effect)
 - **3D Website Machine** (three.js) slider: Old website → New, and Idea → Website
+- 3D portfolio carousel with in-page live website previews
 - Dark / Light mode (remembers your choice)
 - Coding sound effects via the Web Audio API (off by default, toggle in the navbar)
 - Before/after slider, scroll animations, count-up stats, contact form
