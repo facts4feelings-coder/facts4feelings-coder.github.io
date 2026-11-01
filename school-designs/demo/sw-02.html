@@ -319,8 +319,8 @@ const FX = {
 };
 function animateCap(slide){
   const w = slide.querySelectorAll('.cap-h .w');
-  gsap.fromTo(w,{y:38,opacity:0},{y:0,opacity:1,stagger:.055,duration:.6,ease:'power3.out',delay:.15});
-  gsap.fromTo(slide.querySelectorAll('.cap-kick,.cap-sub,.cap .hero-btns'),{y:22,opacity:0},{y:0,opacity:1,stagger:.08,duration:.55,ease:'power3.out',delay:.3});
+  gsap.fromTo(w,{y:38,opacity:0},{y:0,opacity:1,stagger:.055,duration:.6,ease:'power3.out',delay:.22});
+  gsap.fromTo(slide.querySelectorAll('.cap-kick,.cap-sub,.cap .hero-btns'),{y:22,opacity:0},{y:0,opacity:1,stagger:.08,duration:.55,ease:'power3.out',delay:.38});
 }
 let busy=false;
 window.go = function(n){
@@ -328,18 +328,21 @@ window.go = function(n){
   const ss = sl.querySelectorAll('.slide'), out = ss[cur], inn = ss[n];
   const fx = FX[sl.dataset.fx] || FX.fade;
   inn.classList.add('act');
-  gsap.fromTo(out,{autoAlpha:1},{autoAlpha:0,duration:.35,ease:'power2.inOut',onComplete:()=>{ out.classList.remove('act'); gsap.set(out,{clearProps:'all'}); }});
+  gsap.set(out.querySelectorAll('.cap-h .w,.cap-kick,.cap-sub,.cap .hero-btns'),{autoAlpha:0});
+  gsap.fromTo(out,{autoAlpha:1},{autoAlpha:0,duration:.3,ease:'power2.inOut',onComplete:()=>{ out.classList.remove('act'); gsap.set(out,{clearProps:'all'}); gsap.set(out.querySelectorAll('.cap-h .w,.cap-kick,.cap-sub,.cap .hero-btns'),{clearProps:'all'}); }});
   const from = Object.assign({}, fx.f);
   if(sl.dataset.fx==='mosaic') from.transformOrigin = (n%2 ? '100% 100%' : '0% 0%');
-  const to = Object.assign({autoAlpha:1,xPercent:0,yPercent:0,x:0,y:0,scale:1,scaleX:1,rotation:0,rotationX:0,rotationY:0,skewX:0,duration:.95,ease:'power3.out',onComplete:()=>{ busy=false; }}, fx.to||{});
+  const to = Object.assign({autoAlpha:1,xPercent:0,yPercent:0,x:0,y:0,scale:1,scaleX:1,rotation:0,rotationX:0,rotationY:0,skewX:0,duration:.95,ease:'power3.out',onComplete:()=>{ busy=false; syncCtl(n); }}, fx.to||{});
   gsap.fromTo(inn, from, to);
   if(fx.img){ const im = inn.querySelector('img'); gsap.fromTo(im, fx.img, {scale:1,duration:5.5,ease:'power2.out'}); }
   animateCap(inn);
-  cur = n; syncCtl(n);
+  cur = n;
   const bar = sl.querySelector('.sprog span');
   if(bar){ gsap.killTweensOf(bar); gsap.fromTo(bar,{scaleX:0},{scaleX:1,duration:4.2,ease:'none'}); }
 };
-if(sl){ animateCap(sl.querySelector('.slide.act')); const bar=sl.querySelector('.sprog span'); if(bar) gsap.fromTo(bar,{scaleX:0},{scaleX:1,duration:4.2,ease:'none'});
+if(sl){ animateCap(sl.querySelector('.slide.act'));
+  setTimeout(()=>{ if(cur===0 && !busy){ const f=sl.querySelector('.slide.act'); if(f) gsap.set(f.querySelectorAll('.cap-h .w,.cap-kick,.cap-sub,.cap .hero-btns'),{clearProps:'opacity,transform'}); } },1600);
+  const bar=sl.querySelector('.sprog span'); if(bar) gsap.fromTo(bar,{scaleX:0},{scaleX:1,duration:4.2,ease:'none'});
   sl.addEventListener('mouseenter',()=>{ if(timer) clearInterval(timer); });
   sl.addEventListener('mouseleave',restart);
   restart();
