@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>School Website Designs — Catalogue (SW-01 to SW-20)</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#0f2044;color:#1c2733}
+header{text-align:center;color:#fff;padding:44px 18px 30px;background:linear-gradient(160deg,#0f2044,#1c4e89)}
+header .badge{display:inline-block;background:#f5b921;color:#0f2044;font-weight:800;letter-spacing:2px;font-size:13px;padding:7px 16px;border-radius:999px}
+header h1{font-size:clamp(28px,5vw,46px);margin:14px 0 8px}
+header p{color:#cfddf2;font-size:clamp(15px,2.4vw,19px);max-width:760px;margin:0 auto;line-height:1.55}
+header p b{color:#f5b921}
+.filters{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;padding:20px 14px 4px;background:#eef2f8}
+.filters button{border:2px solid #12325e;background:#fff;color:#12325e;font-weight:700;padding:8px 18px;border-radius:999px;cursor:pointer;font-size:15px}
+.filters button.on{background:#12325e;color:#fff}
+.grid{background:#eef2f8;display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:26px;padding:26px;max-width:1440px;margin:0 auto}
+@media(max-width:520px){.grid{grid-template-columns:1fr;padding:16px}}
+.card{background:#fff;border-radius:20px;padding:20px;box-shadow:0 8px 24px rgba(15,32,68,.12)}
+.card-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.id-badge{color:#fff;font-weight:900;font-size:21px;padding:10px 15px;border-radius:12px;letter-spacing:1px}
+.card-titles h3{font-size:23px;color:#0f2044}
+.card-titles p{color:#5a6b80;font-size:14.5px}
+.dots{margin-left:auto;display:flex;gap:6px}
+.dots span{width:22px;height:22px;border-radius:50%}
+.pv{border:1px solid #dbe3ee;border-radius:14px;overflow:hidden;background:#fff}
+.pv-bar{display:flex;align-items:center;gap:6px;background:#e8edf4;padding:7px 10px}
+.pv-bar span{width:11px;height:11px;border-radius:50%;background:#c3cedd}
+.pv-bar em{font-style:normal;font-size:11.5px;color:#5a6b80;background:#fff;border-radius:6px;padding:2px 10px;margin-left:6px}
+.pv-nav{display:flex;align-items:center;gap:10px;color:#fff;padding:9px 12px}
+.pv-logo{font-weight:800;font-size:14.5px}
+.pv-links{font-size:11px;opacity:.92;margin-left:auto}
+.pv-cta{font-size:11px;font-weight:800;color:#14213a;padding:4px 10px;border-radius:6px}
+.pv-hero{height:190px;background-size:cover;background-position:center}
+.pv-overlay{height:100%;background:rgba(8,15,30,.45);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 22px;gap:7px}
+.pv-title{font-size:24px;font-weight:800;line-height:1.2}
+.pv-overlay .pv-title,.pv-split-t .pv-title{text-shadow:none}
+.pv-sub{font-size:13px;opacity:.95}
+.pv-btn{display:inline-block;width:max-content;color:#14213a;font-weight:800;font-size:12.5px;padding:6px 14px;border-radius:7px;margin-top:2px}
+.pv-split{display:flex;gap:14px;padding:16px;align-items:center}
+.pv-split-t{flex:1.15;display:flex;flex-direction:column;gap:7px;color:#1c2733}
+.pv-split img{flex:1;width:45%;height:150px;object-fit:cover;border-radius:12px}
+.pv-cards{display:flex;gap:10px;padding:13px}
+.pv-card{flex:1;background:#f4f7fb;border-radius:10px;padding:11px;font-size:13px;font-weight:700;color:#33475e;text-align:center}
+.pv-card i{display:block;width:26px;height:26px;border-radius:8px;margin:0 auto 6px}
+.pv-stats{display:flex;justify-content:space-around;color:#fff;padding:12px;font-size:13px}
+.pv-stats b{font-size:17px}
+.pv-strip{color:#14213a;font-size:12.5px;font-weight:700;padding:7px 12px}
+.pv-banner{width:100%;height:130px;object-fit:cover;display:block}
+.pv-twocol{display:flex;gap:16px;padding:15px 17px}
+.pv-twocol>div:first-child{flex:1.3;display:flex;flex-direction:column;gap:6px}
+.pv-news{flex:1;background:#f4f7fb;border-radius:10px;padding:11px 13px;font-size:12.5px;line-height:1.75;color:#44566c}
+.pv-mag-t{padding:16px;display:flex;flex-direction:column;gap:6px}
+.pv-mag{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:8px;padding:0 13px 13px}
+.pv-mag img{width:100%;height:105px;object-fit:cover;border-radius:10px}
+.feats{margin-top:13px;font-size:15px;color:#33475e}
+.pick{margin-top:7px;font-size:15px;background:#f4f7fb;border-radius:9px;padding:9px 12px}
+footer{color:#cfddf2;text-align:center;padding:30px 18px 42px;font-size:15.5px;line-height:1.7}
+footer b{color:#f5b921}
+.hide{display:none}
+</style></head><body>
+<header><span class="badge">DESIGN CATALOGUE</span>
+<h1>School Website Designs</h1>
+<p>Neeche <b>20 professional designs</b> hain. Jo design aap ke school ke liye pasand aaye, sirf us ki <b>ID</b> (maslan <b>SW-07</b>) WhatsApp par bhej dein — aap ke school ki website <b>usi design</b> me ban jayegi. Har design me school ka naam, logo, rang aur photos lag jayenge.</p></header>
+<div class="filters">
+<button class="on" data-f="all">Sab Designs (20)</button><button data-f="primary">Primary</button><button data-f="high">High School</button><button data-f="girls">Girls</button><button data-f="islamic">Islamic</button><button data-f="montessori">Montessori</button><button data-f="kids">Kids / Nursery</button><button data-f="premium">Premium</button>
+</div>
+<main class="grid">
+<article class="card" data-cat="high">
+  <div class="card-head"><span class="id-badge" style="background:#12325e">SW-01</span>
+    <div class="card-titles"><h3>Classic Navy</h3><p>Best for: <b>High Schools</b></p></div>
+    <div class="dots"><span style="background:#12325e"></span><span style="background:#c9a227"></span><span style="background:#eef2f8;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.cityhighschool.edu.pk</em></div><div class="pv-nav" style="background:#12325e"><span class="pv-logo" style="font-family:'Georgia','Times New Roman',serif">City High School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#c9a227">Apply Now</span></div><div class="pv-strip" style="background:#c9a227">📢 Admissions Open 2026 — Notice Board</div><img class="pv-banner" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=900&q=70&auto=format&fit=crop" alt=""><div class="pv-twocol"><div><div class="pv-title" style="font-family:'Georgia','Times New Roman',serif">Welcome to<br>City High School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#c9a227">Admission Len</span></div><div class="pv-news"><b style="color:#12325e">Latest News</b><br>• Result announced<br>• Sports day soon<br>• New admissions</div></div></div>
+  <p class="feats">Serif headings • Top menu • Notice strip</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#12325e">SW-01</b></p>
+</article>
+<article class="card" data-cat="premium high">
+  <div class="card-head"><span class="id-badge" style="background:#6d1220">SW-02</span>
+    <div class="card-titles"><h3>Royal Maroon</h3><p>Best for: <b>Premium Schools</b></p></div>
+    <div class="dots"><span style="background:#6d1220"></span><span style="background:#d4af37"></span><span style="background:#faf3ec;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.royalgrammarschool.edu.pk</em></div><div class="pv-nav" style="background:#6d1220"><span class="pv-logo" style="font-family:'Georgia','Times New Roman',serif">Royal Grammar School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#d4af37">Apply Now</span></div><div class="pv-strip" style="background:#d4af37">📢 Admissions Open 2026 — Notice Board</div><img class="pv-banner" src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=900&q=70&auto=format&fit=crop" alt=""><div class="pv-twocol"><div><div class="pv-title" style="font-family:'Georgia','Times New Roman',serif">Welcome to<br>Royal Grammar School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#d4af37">Admission Len</span></div><div class="pv-news"><b style="color:#6d1220">Latest News</b><br>• Result announced<br>• Sports day soon<br>• New admissions</div></div></div>
+  <p class="feats">Heritage look • Gold accents • Formal layout</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#6d1220">SW-02</b></p>
+</article>
+<article class="card" data-cat="all">
+  <div class="card-head"><span class="id-badge" style="background:#166534">SW-03</span>
+    <div class="card-titles"><h3>Green Academy</h3><p>Best for: <b>Sab Schools</b></p></div>
+    <div class="dots"><span style="background:#166534"></span><span style="background:#f59e0b"></span><span style="background:#edf7ee;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.greenacademy.edu.pk</em></div><div class="pv-nav" style="background:#166534"><span class="pv-logo" style="font-family:'Segoe UI',Arial,sans-serif">Green Academy</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#f59e0b">Apply Now</span></div><div class="pv-hero" style="background-image:url(https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=70&auto=format&fit=crop)"><div class="pv-overlay"><div class="pv-title" style="font-family:'Segoe UI',Arial,sans-serif">Welcome to<br>Green Academy</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#f59e0b">Admission Len</span></div></div><div class="pv-cards"><div class="pv-card"><i style="background:#166534"></i>Classes</div><div class="pv-card"><i style="background:#f59e0b"></i>Teachers</div><div class="pv-card"><i style="background:#166534"></i>Results</div></div></div>
+  <p class="feats">Full-width photo hero • Bold buttons</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#166534">SW-03</b></p>
+</article>
+<article class="card" data-cat="primary">
+  <div class="card-head"><span class="id-badge" style="background:#0284c7">SW-04</span>
+    <div class="card-titles"><h3>Sky Primary</h3><p>Best for: <b>Primary Schools</b></p></div>
+    <div class="dots"><span style="background:#0284c7"></span><span style="background:#fbbf24"></span><span style="background:#e8f5fd;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.skyprimaryschool.edu.pk</em></div><div class="pv-nav" style="background:#0284c7"><span class="pv-logo" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Sky Primary School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#fbbf24">Apply Now</span></div><div class="pv-split" style="background:#e8f5fd"><div class="pv-split-t"><div class="pv-title" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Welcome to<br>Sky Primary School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#fbbf24">Admission Len</span></div><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=900&q=70&auto=format&fit=crop" alt=""></div><div class="pv-cards"><div class="pv-card"><i style="background:#0284c7"></i>Classes</div><div class="pv-card"><i style="background:#fbbf24"></i>Teachers</div><div class="pv-card"><i style="background:#0284c7"></i>Results</div></div></div>
+  <p class="feats">Bright blue • Friendly rounded style</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#0284c7">SW-04</b></p>
+</article>
+<article class="card" data-cat="kids montessori">
+  <div class="card-head"><span class="id-badge" style="background:#eab308">SW-05</span>
+    <div class="card-titles"><h3>Sunshine Kids</h3><p>Best for: <b>Kindergarten</b></p></div>
+    <div class="dots"><span style="background:#eab308"></span><span style="background:#ef4444"></span><span style="background:#fff8e1;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.littlesunshine.edu.pk</em></div><div class="pv-nav" style="background:#eab308"><span class="pv-logo" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Little Sunshine</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#ef4444">Apply Now</span></div><div class="pv-mag-t" style="background:#fff8e1;font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif"><div class="pv-title" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Welcome to<br>Little Sunshine</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#ef4444">Admission Len</span></div><div class="pv-mag"><img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=900&q=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=70&auto=format&fit=crop" alt=""></div></div>
+  <p class="feats">Playful yellow • Big round cards</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#eab308">SW-05</b></p>
+</article>
+<article class="card" data-cat="all">
+  <div class="card-head"><span class="id-badge" style="background:#0f766e">SW-06</span>
+    <div class="card-titles"><h3>Modern Teal</h3><p>Best for: <b>Sab Schools</b></p></div>
+    <div class="dots"><span style="background:#0f766e"></span><span style="background:#14b8a6"></span><span style="background:#e6f7f5;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.modernschoolsystem.edu.pk</em></div><div class="pv-nav" style="background:#0f766e"><span class="pv-logo" style="font-family:'Segoe UI',Arial,sans-serif">Modern School System</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#14b8a6">Apply Now</span></div><div class="pv-split" style="background:#e6f7f5"><div class="pv-split-t"><div class="pv-title" style="font-family:'Segoe UI',Arial,sans-serif">Welcome to<br>Modern School System</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#14b8a6">Admission Len</span></div><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=70&auto=format&fit=crop" alt=""></div><div class="pv-stats" style="background:#0f766e"><span><b>1200+</b> Students</span><span><b>45+</b> Teachers</span><span><b>25</b> Years</span></div></div>
+  <p class="feats">Clean minimal • Stats bar • Modern cards</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#0f766e">SW-06</b></p>
+</article>
+<article class="card" data-cat="girls">
+  <div class="card-head"><span class="id-badge" style="background:#6d28d9">SW-07</span>
+    <div class="card-titles"><h3>Elegant Purple</h3><p>Best for: <b>Girls Schools</b></p></div>
+    <div class="dots"><span style="background:#6d28d9"></span><span style="background:#f0abfc"></span><span style="background:#f5f0fb;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.fatimagirlsschool.edu.pk</em></div><div class="pv-nav" style="background:#6d28d9"><span class="pv-logo" style="font-family:'Georgia','Times New Roman',serif">Fatima Girls School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#f0abfc">Apply Now</span></div><div class="pv-split" style="background:#f5f0fb"><div class="pv-split-t"><div class="pv-title" style="font-family:'Georgia','Times New Roman',serif">Welcome to<br>Fatima Girls School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#f0abfc">Admission Len</span></div><img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=900&q=70&auto=format&fit=crop" alt=""></div><div class="pv-cards"><div class="pv-card"><i style="background:#6d28d9"></i>Classes</div><div class="pv-card"><i style="background:#f0abfc"></i>Teachers</div><div class="pv-card"><i style="background:#6d28d9"></i>Results</div></div></div>
+  <p class="feats">Soft purple • Elegant serif • Graceful</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#6d28d9">SW-07</b></p>
+</article>
+<article class="card" data-cat="primary all">
+  <div class="card-head"><span class="id-badge" style="background:#ea580c">SW-08</span>
+    <div class="card-titles"><h3>Coral Fresh</h3><p>Best for: <b>Primary Schools</b></p></div>
+    <div class="dots"><span style="background:#ea580c"></span><span style="background:#fb7185"></span><span style="background:#fff3ec;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.brightfutureschool.edu.pk</em></div><div class="pv-nav" style="background:#ea580c"><span class="pv-logo" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Bright Future School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#fb7185">Apply Now</span></div><div class="pv-split" style="background:#fff3ec"><div class="pv-split-t"><div class="pv-title" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Welcome to<br>Bright Future School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#fb7185">Admission Len</span></div><img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=900&q=70&auto=format&fit=crop" alt=""></div><div class="pv-stats" style="background:#ea580c"><span><b>1200+</b> Students</span><span><b>45+</b> Teachers</span><span><b>25</b> Years</span></div></div>
+  <p class="feats">Fresh coral • Young modern feel</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#ea580c">SW-08</b></p>
+</article>
+<article class="card" data-cat="premium high">
+  <div class="card-head"><span class="id-badge" style="background:#1f2937">SW-09</span>
+    <div class="card-titles"><h3>Charcoal Premium</h3><p>Best for: <b>Premium / Colleges</b></p></div>
+    <div class="dots"><span style="background:#1f2937"></span><span style="background:#f59e0b"></span><span style="background:#eceff3;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.thescholarscollege.edu.pk</em></div><div class="pv-nav" style="background:#1f2937"><span class="pv-logo" style="font-family:'Segoe UI',Arial,sans-serif">The Scholars College</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#f59e0b">Apply Now</span></div><div class="pv-hero" style="background-image:url(https://images.unsplash.com/photo-1562774053-701939374585?w=900&q=70&auto=format&fit=crop)"><div class="pv-overlay"><div class="pv-title" style="font-family:'Segoe UI',Arial,sans-serif">Welcome to<br>The Scholars College</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#f59e0b">Admission Len</span></div></div><div class="pv-cards"><div class="pv-card"><i style="background:#1f2937"></i>Classes</div><div class="pv-card"><i style="background:#f59e0b"></i>Teachers</div><div class="pv-card"><i style="background:#1f2937"></i>Results</div></div></div>
+  <p class="feats">Dark premium • Strong bold hero</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#1f2937">SW-09</b></p>
+</article>
+<article class="card" data-cat="girls primary">
+  <div class="card-head"><span class="id-badge" style="background:#db2777">SW-10</span>
+    <div class="card-titles"><h3>Rose Girls</h3><p>Best for: <b>Girls Primary</b></p></div>
+    <div class="dots"><span style="background:#db2777"></span><span style="background:#f9a8d4"></span><span style="background:#fdf0f6;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.rosevalleygirlsschool.edu.pk</em></div><div class="pv-nav" style="background:#db2777"><span class="pv-logo" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Rose Valley Girls School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#f9a8d4">Apply Now</span></div><div class="pv-split" style="background:#fdf0f6"><div class="pv-split-t"><div class="pv-title" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Welcome to<br>Rose Valley Girls School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#f9a8d4">Admission Len</span></div><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=900&q=70&auto=format&fit=crop" alt=""></div><div class="pv-cards"><div class="pv-card"><i style="background:#db2777"></i>Classes</div><div class="pv-card"><i style="background:#f9a8d4"></i>Teachers</div><div class="pv-card"><i style="background:#db2777"></i>Results</div></div></div>
+  <p class="feats">Soft pink • Gentle rounded corners</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#db2777">SW-10</b></p>
+</article>
+<article class="card" data-cat="all">
+  <div class="card-head"><span class="id-badge" style="background:#14532d">SW-11</span>
+    <div class="card-titles"><h3>Forest Nature</h3><p>Best for: <b>Sab Schools</b></p></div>
+    <div class="dots"><span style="background:#14532d"></span><span style="background:#a3e635"></span><span style="background:#eef6ec;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.forestpublicschool.edu.pk</em></div><div class="pv-nav" style="background:#14532d"><span class="pv-logo" style="font-family:'Georgia','Times New Roman',serif">Forest Public School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#a3e635">Apply Now</span></div><div class="pv-hero" style="background-image:url(https://images.unsplash.com/photo-1577896852618-01da1dd79f7e?w=900&q=70&auto=format&fit=crop)"><div class="pv-overlay"><div class="pv-title" style="font-family:'Georgia','Times New Roman',serif">Welcome to<br>Forest Public School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#a3e635">Admission Len</span></div></div><div class="pv-cards"><div class="pv-card"><i style="background:#14532d"></i>Classes</div><div class="pv-card"><i style="background:#a3e635"></i>Teachers</div><div class="pv-card"><i style="background:#14532d"></i>Results</div></div></div>
+  <p class="feats">Deep green • Natural calm look</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#14532d">SW-11</b></p>
+</article>
+<article class="card" data-cat="high">
+  <div class="card-head"><span class="id-badge" style="background:#1d4ed8">SW-12</span>
+    <div class="card-titles"><h3>Ocean Tech</h3><p>Best for: <b>High / Science Schools</b></p></div>
+    <div class="dots"><span style="background:#1d4ed8"></span><span style="background:#38bdf8"></span><span style="background:#e9f2fe;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.oceanscienceschool.edu.pk</em></div><div class="pv-nav" style="background:#1d4ed8"><span class="pv-logo" style="font-family:'Segoe UI',Arial,sans-serif">Ocean Science School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#38bdf8">Apply Now</span></div><div class="pv-split" style="background:#e9f2fe"><div class="pv-split-t"><div class="pv-title" style="font-family:'Segoe UI',Arial,sans-serif">Welcome to<br>Ocean Science School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#38bdf8">Admission Len</span></div><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=70&auto=format&fit=crop" alt=""></div><div class="pv-stats" style="background:#1d4ed8"><span><b>1200+</b> Students</span><span><b>45+</b> Teachers</span><span><b>25</b> Years</span></div></div>
+  <p class="feats">Blue gradient • Tech feel • Stats bar</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#1d4ed8">SW-12</b></p>
+</article>
+<article class="card" data-cat="montessori kids">
+  <div class="card-head"><span class="id-badge" style="background:#b45309">SW-13</span>
+    <div class="card-titles"><h3>Sand Montessori</h3><p>Best for: <b>Montessori</b></p></div>
+    <div class="dots"><span style="background:#b45309"></span><span style="background:#d6c39a"></span><span style="background:#faf5ec;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.littlestepsmontessori.edu.pk</em></div><div class="pv-nav" style="background:#b45309"><span class="pv-logo" style="font-family:'Georgia','Times New Roman',serif">Little Steps Montessori</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#d6c39a">Apply Now</span></div><div class="pv-mag-t" style="background:#faf5ec;font-family:'Georgia','Times New Roman',serif"><div class="pv-title" style="font-family:'Georgia','Times New Roman',serif">Welcome to<br>Little Steps Montessori</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#d6c39a">Admission Len</span></div><div class="pv-mag"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=900&q=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=70&auto=format&fit=crop" alt=""></div></div>
+  <p class="feats">Warm beige • Soft • Calm premium</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#b45309">SW-13</b></p>
+</article>
+<article class="card" data-cat="high premium">
+  <div class="card-head"><span class="id-badge" style="background:#9a3412">SW-14</span>
+    <div class="card-titles"><h3>Brick Heritage</h3><p>Best for: <b>Purani / Mashhoor Schools</b></p></div>
+    <div class="dots"><span style="background:#9a3412"></span><span style="background:#e7c07f"></span><span style="background:#fbf1e8;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.heritagehighschool.edu.pk</em></div><div class="pv-nav" style="background:#9a3412"><span class="pv-logo" style="font-family:'Georgia','Times New Roman',serif">Heritage High School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#e7c07f">Apply Now</span></div><div class="pv-strip" style="background:#e7c07f">📢 Admissions Open 2026 — Notice Board</div><img class="pv-banner" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=900&q=70&auto=format&fit=crop" alt=""><div class="pv-twocol"><div><div class="pv-title" style="font-family:'Georgia','Times New Roman',serif">Welcome to<br>Heritage High School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#e7c07f">Admission Len</span></div><div class="pv-news"><b style="color:#9a3412">Latest News</b><br>• Result announced<br>• Sports day soon<br>• New admissions</div></div></div>
+  <p class="feats">Brick red • Traditional • Trust wala look</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#9a3412">SW-14</b></p>
+</article>
+<article class="card" data-cat="premium">
+  <div class="card-head"><span class="id-badge" style="background:#312e81">SW-15</span>
+    <div class="card-titles"><h3>Indigo Night</h3><p>Best for: <b>Premium Schools</b></p></div>
+    <div class="dots"><span style="background:#312e81"></span><span style="background:#818cf8"></span><span style="background:#eceafd;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.indigoacademy.edu.pk</em></div><div class="pv-nav" style="background:#312e81"><span class="pv-logo" style="font-family:'Segoe UI',Arial,sans-serif">Indigo Academy</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#818cf8">Apply Now</span></div><div class="pv-hero" style="background-image:url(https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=900&q=70&auto=format&fit=crop)"><div class="pv-overlay"><div class="pv-title" style="font-family:'Segoe UI',Arial,sans-serif">Welcome to<br>Indigo Academy</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#818cf8">Admission Len</span></div></div><div class="pv-cards"><div class="pv-card"><i style="background:#312e81"></i>Classes</div><div class="pv-card"><i style="background:#818cf8"></i>Teachers</div><div class="pv-card"><i style="background:#312e81"></i>Results</div></div></div>
+  <p class="feats">Dark indigo • Sleek • Raat wala premium</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#312e81">SW-15</b></p>
+</article>
+<article class="card" data-cat="montessori kids">
+  <div class="card-head"><span class="id-badge" style="background:#059669">SW-16</span>
+    <div class="card-titles"><h3>Mint Fresh</h3><p>Best for: <b>Montessori / Kids</b></p></div>
+    <div class="dots"><span style="background:#059669"></span><span style="background:#6ee7b7"></span><span style="background:#eafaf3;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.mintkidscampus.edu.pk</em></div><div class="pv-nav" style="background:#059669"><span class="pv-logo" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Mint Kids Campus</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#6ee7b7">Apply Now</span></div><div class="pv-split" style="background:#eafaf3"><div class="pv-split-t"><div class="pv-title" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Welcome to<br>Mint Kids Campus</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#6ee7b7">Admission Len</span></div><img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=900&q=70&auto=format&fit=crop" alt=""></div><div class="pv-cards"><div class="pv-card"><i style="background:#059669"></i>Classes</div><div class="pv-card"><i style="background:#6ee7b7"></i>Teachers</div><div class="pv-card"><i style="background:#059669"></i>Results</div></div></div>
+  <p class="feats">Pastel mint • Fresh • Soft shadows</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#059669">SW-16</b></p>
+</article>
+<article class="card" data-cat="primary">
+  <div class="card-head"><span class="id-badge" style="background:#f97316">SW-17</span>
+    <div class="card-titles"><h3>Orange Energy</h3><p>Best for: <b>Primary Schools</b></p></div>
+    <div class="dots"><span style="background:#f97316"></span><span style="background:#2563eb"></span><span style="background:#fff4e8;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.orangepublicschool.edu.pk</em></div><div class="pv-nav" style="background:#f97316"><span class="pv-logo" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Orange Public School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#2563eb">Apply Now</span></div><div class="pv-mag-t" style="background:#fff4e8;font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif"><div class="pv-title" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Welcome to<br>Orange Public School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#2563eb">Admission Len</span></div><div class="pv-mag"><img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=900&q=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=70&auto=format&fit=crop" alt=""></div></div>
+  <p class="feats">Energetic orange • Lively grid layout</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#f97316">SW-17</b></p>
+</article>
+<article class="card" data-cat="premium high">
+  <div class="card-head"><span class="id-badge" style="background:#334155">SW-18</span>
+    <div class="card-titles"><h3>Slate Corporate</h3><p>Best for: <b>Colleges / Chains</b></p></div>
+    <div class="dots"><span style="background:#334155"></span><span style="background:#94a3b8"></span><span style="background:#eef1f5;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.slatecollege.edu.pk</em></div><div class="pv-nav" style="background:#334155"><span class="pv-logo" style="font-family:'Segoe UI',Arial,sans-serif">Slate College</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#94a3b8">Apply Now</span></div><div class="pv-split" style="background:#eef1f5"><div class="pv-split-t"><div class="pv-title" style="font-family:'Segoe UI',Arial,sans-serif">Welcome to<br>Slate College</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#94a3b8">Admission Len</span></div><img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=900&q=70&auto=format&fit=crop" alt=""></div><div class="pv-stats" style="background:#334155"><span><b>1200+</b> Students</span><span><b>45+</b> Teachers</span><span><b>25</b> Years</span></div></div>
+  <p class="feats">Grey corporate • Super clean • No shor sharaba</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#334155">SW-18</b></p>
+</article>
+<article class="card" data-cat="islamic">
+  <div class="card-head"><span class="id-badge" style="background:#065f46">SW-19</span>
+    <div class="card-titles"><h3>Emerald Islamic</h3><p>Best for: <b>Islamic Schools</b></p></div>
+    <div class="dots"><span style="background:#065f46"></span><span style="background:#d4af37"></span><span style="background:#ecf7f1;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.al-noorislamicschool.edu.pk</em></div><div class="pv-nav" style="background:#065f46"><span class="pv-logo" style="font-family:'Georgia','Times New Roman',serif">Al-Noor Islamic School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#d4af37">Apply Now</span></div><div class="pv-strip" style="background:#d4af37">📢 Admissions Open 2026 — Notice Board</div><img class="pv-banner" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=70&auto=format&fit=crop" alt=""><div class="pv-twocol"><div><div class="pv-title" style="font-family:'Georgia','Times New Roman',serif">Welcome to<br>Al-Noor Islamic School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#d4af37">Admission Len</span></div><div class="pv-news"><b style="color:#065f46">Latest News</b><br>• Result announced<br>• Sports day soon<br>• New admissions</div></div></div>
+  <p class="feats">Emerald + gold • Geometric Islamic touch</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#065f46">SW-19</b></p>
+</article>
+<article class="card" data-cat="kids">
+  <div class="card-head"><span class="id-badge" style="background:#7c3aed">SW-20</span>
+    <div class="card-titles"><h3>Rainbow Play</h3><p>Best for: <b>Nursery / Kindergarten</b></p></div>
+    <div class="dots"><span style="background:#7c3aed"></span><span style="background:#facc15"></span><span style="background:#fdf6ff;border:1px solid #ccc"></span></div>
+  </div>
+  <div class="pv"><div class="pv-bar"><span></span><span></span><span></span><em>www.rainbowkidsschool.edu.pk</em></div><div class="pv-nav" style="background:#7c3aed"><span class="pv-logo" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Rainbow Kids School</span><span class="pv-links">Home&nbsp;&nbsp;About&nbsp;&nbsp;Admissions&nbsp;&nbsp;Gallery&nbsp;&nbsp;Contact</span><span class="pv-cta" style="background:#facc15">Apply Now</span></div><div class="pv-mag-t" style="background:#fdf6ff;font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif"><div class="pv-title" style="font-family:'Comic Sans MS','Segoe UI Rounded','Segoe UI',Arial,sans-serif">Welcome to<br>Rainbow Kids School</div><div class="pv-sub">Quality education for a bright future</div><span class="pv-btn" style="background:#facc15">Admission Len</span></div><div class="pv-mag"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=70&auto=format&fit=crop" alt=""></div></div>
+  <p class="feats">Multi-color • Playful • Bachon wala fun look</p>
+  <p class="pick">Pasand aaye to sirf ye ID bhejen: <b style="color:#7c3aed">SW-20</b></p>
+</article>
+</main>
+<footer>Design IDs: <b>SW-01, SW-02, SW-03, SW-04, SW-05, SW-06, SW-07, SW-08, SW-09, SW-10, SW-11, SW-12, SW-13, SW-14, SW-15, SW-16, SW-17, SW-18, SW-19, SW-20</b><br>Pasandeeda design ki ID WhatsApp par bhejen — website usi design me tayyar ho jayegi.<br>Prices ke liye packages wali rate card dekhen: Basic Rs. 3,000 • Standard Rs. 4,500 • Premium Rs. 7,000</footer>
+<script>
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ const f=b.dataset.f;
+ document.querySelectorAll('.card').forEach(c=>{
+   c.classList.toggle('hide', !(f==='all'||c.dataset.cat.includes(f)||c.dataset.cat.includes('all')&&f!=='premium'&&f!=='girls'&&f!=='islamic'&&f!=='kids'&&f!=='montessori'));
+ });
+});
+</script>
+</body></html>
